@@ -1,46 +1,47 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>サンプルホームページ</title>
+    <title>My Link Collection</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f0f0f0;
         }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        section {
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
             padding: 20px;
         }
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        .link {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .link a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .link a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>ようこそ！</h1>
-    </header>
-    <section>
-        <h2>こんにちは、世界！</h2>
-        <p>これはサンプルの1ページホームページです。</p>
-        <p>ここに本文が入ります。</p>
-    </section>
-    <footer>
-        <p>&copy; 2024 サンプルホームページ</p>
-    </footer>
+    <div class="container">
+        <div class="link">
+            <a href="https://example.com">Example Website</a>
+        </div>
+        <div class="link">
+            <a href="https://example2.com">Another Example</a>
+        </div>
+        <!-- Add more links as needed -->
+    </div>
 </body>
 </html>
