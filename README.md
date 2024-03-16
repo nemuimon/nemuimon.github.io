@@ -5,7 +5,7 @@
     <th>まにあきー</th>
   </tr>
   <tr>
-    <td><a rel="me" href="https://misskey.io/@nemuimon" target="_blank" rel="noreferrer noopener">まにあきー</a></td>
-    <td><a rel="me" href="https://maniakey.com/@YuruSanyagi" target="_blank" rel="noreferrer noopener">Misskey.io</a></td>
+    <td><a rel="me" href="https://misskey.io/@nemuimon" target="_blank" rel="noreferrer noopener">Misskey.io</a></td>
+    <td><a rel="me" href="https://maniakey.com/@YuruSanyagi" target="_blank" rel="noreferrer noopener">まにあきー</a></td>
   </tr>
 </table>
