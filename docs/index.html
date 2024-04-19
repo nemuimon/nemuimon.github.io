@@ -85,6 +85,55 @@ a.pagetop {
         display: block;
     }
 }
+
+        #heart {
+        position: fixed;
+        font-size: 37px;
+        color: red;
+        display: none;
+    }
+    #pink_heart {
+        position: fixed;
+        font-size: 37px;
+        color: pink;
+        display: none;
+    }
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F2F7FF;
+  }
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+  .heart {
+    background-color: #EC58A0;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    animation: fly 2s linear forwards;
+  }
+  @keyframes fly {
+    0% {transform: translateY(0) rotate(0);}
+    100% {transform: translateY(-100px) rotate(360deg);}
+  }
+  #counter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 24px;
+    color: white;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+  }
+  #image {
+    cursor: pointer;
+    display: block;
+  }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -101,8 +150,18 @@ a.pagetop {
     <br>
     
      <div class="box">
-          <center><img src="https://r2.sizu.me/users/2477/post-images/ra8d1mcvhi04is1si0un.png" alt="アイコン"></center>
-          <center> <h2>沙凪</h2></center>
+         <div class="image-container">
+  <div id="counter">♥0</div>
+          <center><img src="https://r2.sizu.me/users/2477/post-images/ra8d1mcvhi04is1si0un.png" alt="Click me!" onclick="flyHeart(event)"></center>
+         <div id="heart">♥</div>
+<div id="pink_heart">🩷</div>
+<div id="heart">♥</div>
+<div id="pink_heart">🩷</div>
+<div id="heart">♥</div>
+<div id="pink_heart">🩷</div>
+<div id="heart">♥</div>
+<div id="pink_heart">🩷</div>
+             <center> <h2>沙凪</h2></center>
         <br>
        中の人は雑多雑食の人見知り成人。
    
@@ -208,5 +267,119 @@ a.pagetop {
     });
   }
    </script>
+         <script>
+    function flyHeart(event) {
+        // マウスクリックの位置を取得
+        const x = event.clientX;
+        const y = event.clientY;
+// ハートを表示して位置を設定
+        const heart = document.getElementById('pink_heart');
+        heart.style.left = x + 'px';
+        heart.style.top = y + 'px';
+        heart.style.display = 'block';
+        // ハートを表示して位置を設定
+        const heart = document.getElementById('heart');
+        heart.style.left = x + 'px';
+        heart.style.top = y + 'px';
+        heart.style.display = 'block';
+        
+        
+</script>
+<script>
+    function flyHeart(event) {
+        // マウスクリックの位置を取得
+        const x = event.clientX;
+        const y = event.clientY;
+
+     // 各ハートをランダムな位置から表示
+        hearts.forEach((heart) => {
+            const randomX = Math.random() * screenWidth;
+            const randomY = Math.random() * screenHeight;
+            heart.style.left = randomX + 'px';
+            heart.style.top = randomY + 'px';
+            heart.style.display = 'block';
+
+        // ハートをアニメーションさせて飛ばす
+        setTimeout(() => {
+            heart.style.top = (y - 100) + 'px';
+            setTimeout(() => {
+                heart.style.display = 'none';
+            }, 500);
+        }, 10);
+    }
+</script>
+<script>
+    function flyHeart() {
+        const heart = document.getElementById('pink_heart');
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+
+        // ハートをランダムな位置から表示
+        const randomX = Math.random() * screenWidth;
+        const randomY = Math.random() * screenHeight;
+        heart.style.left = randomX + 'px';
+        heart.style.top = randomY + 'px';
+        heart.style.display = 'block';
+
+        // ハートをアニメーションさせて飛ばす
+        setTimeout(() => {
+            heart.style.top = (randomY - 100) + 'px';
+            setTimeout(() => {
+                heart.style.display = 'none';
+            }, 500);
+        }, 10);
+    }
+
+    // 一定の間隔で自動的にハートを飛ばす
+    setInterval(flyHeart, 2000); // 2000ミリ秒（2秒）ごとに実行
+</script>
+<script>
+    function flyHeart() {
+        const heart = document.getElementById('heart');
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+
+        // ハートをランダムな位置から表示
+        const randomX = Math.random() * screenWidth;
+        const randomY = Math.random() * screenHeight;
+        heart.style.left = randomX + 'px';
+        heart.style.top = randomY + 'px';
+        heart.style.display = 'block';
+
+        // ハートをアニメーションさせて飛ばす
+        setTimeout(() => {
+            heart.style.top = (randomY - 100) + 'px';
+            setTimeout(() => {
+                heart.style.display = 'none';
+            }, 500);
+        }, 10);
+    }
+
+    // 一定の間隔で自動的にハートを飛ばす
+    setInterval(flyHeart, 2000); // 2000ミリ秒（2秒）ごとに実行
+</script>
+<script>
+  let count = 0;
+
+  function createHeart(x, y) {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.style.left = x + 'px';
+    heart.style.top = y + 'px';
+    document.querySelector('.image-container').appendChild(heart);
+    setTimeout(() => {
+      heart.remove();
+    }, 2000);
+    count++;
+    document.getElementById('counter').textContent = count;
+  }
+
+  document.getElementById('image').addEventListener('click', function(e) {
+    const rect = this.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    createHeart(x, y);
+  });
+</script>
 </body>
 </html>
