@@ -311,56 +311,9 @@ a.pagetop {
         }, 10);
     }
 </script>
+
 <script>
-    function flyHeart() {
-        const heart = document.getElementById('pink_heart');
-        const screenWidth = window.innerWidth;
-        const screenHeight = window.innerHeight;
 
-        // ハートをランダムな位置から表示
-        const randomX = Math.random() * screenWidth;
-        const randomY = Math.random() * screenHeight;
-        heart.style.left = randomX + 'px';
-        heart.style.top = randomY + 'px';
-        heart.style.display = 'block';
-
-        // ハートをアニメーションさせて飛ばす
-        setTimeout(() => {
-            heart.style.top = (randomY - 100) + 'px';
-            setTimeout(() => {
-                heart.style.display = 'none';
-            }, 500);
-        }, 10);
-    }
-
-    // 一定の間隔で自動的にハートを飛ばす
-    setInterval(flyHeart, 2000); // 2000ミリ秒（2秒）ごとに実行
-</script>
-<script>
-    function flyHeart() {
-        const heart = document.getElementById('heart');
-        const screenWidth = window.innerWidth;
-        const screenHeight = window.innerHeight;
-
-        // ハートをランダムな位置から表示
-        const randomX = Math.random() * screenWidth;
-        const randomY = Math.random() * screenHeight;
-        heart.style.left = randomX + 'px';
-        heart.style.top = randomY + 'px';
-        heart.style.display = 'block';
-
-        // ハートをアニメーションさせて飛ばす
-        setTimeout(() => {
-            heart.style.top = (randomY - 100) + 'px';
-            setTimeout(() => {
-                heart.style.display = 'none';
-            }, 500);
-        }, 10);
-    }
-
-    // 一定の間隔で自動的にハートを飛ばす
-    setInterval(flyHeart, 2000); // 2000ミリ秒（2秒）ごとに実行
-</script>
 <script>
   let count = 0;
 
