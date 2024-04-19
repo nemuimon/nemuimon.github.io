@@ -270,49 +270,7 @@ a.pagetop {
     });
   }
    </script>
-         <script>
-    function flyHeart(event) {
-        // マウスクリックの位置を取得
-        const x = event.clientX;
-        const y = event.clientY;
-// ハートを表示して位置を設定
-        const heart = document.getElementById('pink_heart');
-        heart.style.left = x + 'px';
-        heart.style.top = y + 'px';
-        heart.style.display = 'block';
-        // ハートを表示して位置を設定
-        const heart = document.getElementById('heart');
-        heart.style.left = x + 'px';
-        heart.style.top = y + 'px';
-        heart.style.display = 'block';
         
-        
-</script>
-<script>
-    function flyHeart(event) {
-        // マウスクリックの位置を取得
-        const x = event.clientX;
-        const y = event.clientY;
-
-     // 各ハートをランダムな位置から表示
-        hearts.forEach((heart) => {
-            const randomX = Math.random() * screenWidth;
-            const randomY = Math.random() * screenHeight;
-            heart.style.left = randomX + 'px';
-            heart.style.top = randomY + 'px';
-            heart.style.display = 'block';
-
-        // ハートをアニメーションさせて飛ばす
-        setTimeout(() => {
-            heart.style.top = (y - 100) + 'px';
-            setTimeout(() => {
-                heart.style.display = 'none';
-            }, 500);
-        }, 10);
-    }
-</script>
-
-<script>
 
 <script>
   let count = 0;
