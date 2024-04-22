@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -87,37 +87,7 @@ a.pagetop {
 }
 
         
-  .image-container {
-    position: relative;
-    display: inline-block;
-  }  
-  .heart {
-    background-color: #EC58A0;
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    animation: fly 2s linear forwards;
-  }
-  @keyframes fly {
-    0% {transform: translateY(0) rotate(0);}
-    100% {transform: translateY(-100px) rotate(360deg);}
-  }
-  #counter {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 24px;
-    color: white;
-    z-index: 10;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 5px;
-  }
-  #image {
-    cursor: pointer;
-    display: block;
-  }
-    
-        
+ 
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -140,10 +110,13 @@ a.pagetop {
       
             
     </div>    
-      
-            
-   
-    
+     <hr> 
+     <div class="link">
+            <a rel="me" href="https://trickle.day/nankano-sanagi" target="_blank" rel="noreferrer noopener">Trickle</a>
+     </div>        
+   <center><iframe src="https://trickle.day/nankano-sanagi" width="100%" height="315"target="_blank" rel="noreferrer noopener"></iframe></center>
+
+    <hr>
        
 　　　　<div class="link">
             <a rel="me" href="https://wavebox.me/wave/2hevaw2nkilczomm/" target="_blank" rel="noreferrer noopener">Wavebox</a>
@@ -170,7 +143,7 @@ a.pagetop {
              
          
         <div class="link">
-            <a rel="me" href="https://nostter.app/nemuimon.github.io/" target="_blank" rel="noreferrer noopener">nostr(🐾)</a>
+            <a rel="me" href="https://nostter.app/nankano-sanagi.github.io/" target="_blank" rel="noreferrer noopener">nostr(🐾)</a>
         </div>
          
         
@@ -179,11 +152,7 @@ a.pagetop {
     
             <a rel="me" href="https://side.misskey.productions/@Sanyagi"></a>
      
-    <hr>
-   <center> <div class="image-container">
-  <div id="counter">♥0</div>  
-    <img id="image" src="https://r2.sizu.me/users/2477/post-images/ru2601cdw6wb5icfktov.gif" alt="Click me!" width="200" onclick="flyHeart(event)"></center>  
-    <br>
+   
              <a href="#" class="pagetop">
         <span class="material-symbols-outlined">
             expand_less
@@ -205,28 +174,6 @@ a.pagetop {
    </script>
         
 
-<script>
-  let count = 0;
 
-  function createHeart(x, y) {
-    const heart = document.createElement('div');
-    heart.classList.add('heart');
-    heart.style.left = x + 'px';
-    heart.style.top = y + 'px';
-    document.querySelector('.image-container').appendChild(heart);
-    setTimeout(() => {
-      heart.remove();
-    }, 2000);
-    count++;
-    document.getElementById('counter').textContent = count;
-  }
-
-  document.getElementById('image').addEventListener('click', function(e) {
-    const rect = this.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    createHeart(x, y);
-  });
-</script>
 </body>
 </html>
