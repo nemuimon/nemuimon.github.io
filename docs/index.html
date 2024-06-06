@@ -136,7 +136,12 @@ a.pagetop {
   </footer>
 <script src="js/scrollbooster.min.js" charset="utf-8"></script>
 <script src="js/fuwaimg.js" charset="utf-8"></script>
-<script>
+<a href="#" class="pagetop">
+        <span class="material-symbols-outlined">
+            expand_less
+        </span>
+</a>
+  <script>
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
       navigator.serviceWorker.register('/color-name/sw.js').then(function(registration) {
