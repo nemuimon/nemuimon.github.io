@@ -14,10 +14,31 @@ header {
     text-align: center;
 }
 
+/* 全体のリセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* フレックスボックスを使ってフッターを固定 */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* ビューポートの高さを確保 */
+}
+
+.content {
+    flex: 1; /* メインコンテンツがある部分は自動的にスペースを占める */
+}
+
 footer {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
     text-align: center;
-    margin-top: 20px;
+    padding: 10px 0;
 }
