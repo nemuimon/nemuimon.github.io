@@ -44,7 +44,9 @@ html {
 .wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* ビューポートの高さを確保 */
+    position: relative;/*←相対位置*/
+    padding-bottom: 120px;/*←footerの高さ*/
+    box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
 }
 
 .content {
@@ -58,6 +60,8 @@ footer {
     padding: 20px 0;
     text-align: center;
      width: 100%;       
+position: absolute;/*←絶対位置*/
+    bottom: 0; /*下に固定*/
 }
 
 .footer-content {
