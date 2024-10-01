@@ -18,14 +18,37 @@
  border-bottom: 3px solid #aaa; 
  color: #aaa;
 }
-h3 { 
- color: #aaa;
+
+ul {
+  padding: 0;
 }
 
+ul li {
+  position: relative;
+  list-style-type: none;
+  padding: 0.5em 0.5em 0.5em 2em; 
+  margin-bottom: 5px;
+  line-height: 1.5;
+  background: #aaa;
+  vertical-align: middle;
+  color: #fff;
+  border-radius: 20px 0 0 20px;
+}
+
+ul li::before {
+  position: absolute;
+  left: 0.7em;
+  top: 0.75em;
+  content: '';
+  width: 1em;
+  height: 1em;
+  background: #fff;
+  border-radius: 50%;
+}
      
 .link {
-  border-left: 7px  #87ceeb;
-  border-right: 7px  #87ceeb;
+  border-left:7px double   #87ceeb;
+  border-right:7px double　  #87ceeb;
     background-color: #f0f0f0; /* 薄めの灰色 */
     border-radius: 8px;
     padding: 7px 15px;
